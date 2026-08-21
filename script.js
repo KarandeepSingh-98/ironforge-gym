@@ -324,3 +324,196 @@ document.addEventListener("keydown", (event) => {
     }
 
 });
+
+
+/* =========================================
+   MEMBERSHIP DETAILS
+========================================= */
+
+const membershipPlans = {
+
+    basic: {
+        title: "Basic",
+
+        description:
+            "Everything you need to build a consistent fitness routine and get started with your training.",
+
+        price: "₹1,499",
+
+        features: [
+            "Gym access",
+            "Locker access",
+            "Basic equipment"
+        ]
+    },
+
+    pro: {
+        title: "Pro",
+
+        description:
+            "The complete gym experience for serious and consistent training, with additional support and group sessions.",
+
+        price: "₹2,499",
+
+        features: [
+            "Full gym access",
+            "Group classes",
+            "Fitness assessment",
+            "Locker access"
+        ]
+    },
+
+    elite: {
+        title: "Elite",
+
+        description:
+            "Premium support and personalized guidance designed for members who want a more complete training experience.",
+
+        price: "₹4,999",
+
+        features: [
+            "Everything in Pro",
+            "Personal training",
+            "Nutrition guidance",
+            "Priority booking"
+        ]
+    }
+
+};
+
+
+const membershipModal =
+    document.getElementById("membershipModal");
+
+const membershipModalClose =
+    document.getElementById("membershipModalClose");
+
+const membershipModalTitle =
+    document.getElementById("membershipModalTitle");
+
+const membershipModalDescription =
+    document.getElementById("membershipModalDescription");
+
+const membershipModalPrice =
+    document.getElementById("membershipModalPrice");
+
+const membershipModalFeatures =
+    document.getElementById("membershipModalFeatures");
+
+
+function openMembershipDetails(planName) {
+
+    const plan = membershipPlans[planName];
+
+    if (!plan || !membershipModal) {
+        return;
+    }
+
+    membershipModalTitle.textContent = plan.title;
+
+    membershipModalDescription.textContent =
+        plan.description;
+
+    membershipModalPrice.textContent =
+        plan.price;
+
+
+    membershipModalFeatures.innerHTML = "";
+
+
+    plan.features.forEach((feature) => {
+
+        const li = document.createElement("li");
+
+        li.textContent = feature;
+
+        membershipModalFeatures.appendChild(li);
+
+    });
+
+
+    membershipModal.classList.add("active");
+
+    membershipModal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeMembershipDetails() {
+
+    if (!membershipModal) {
+        return;
+    }
+
+    membershipModal.classList.remove("active");
+
+    membershipModal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.style.overflow = "";
+}
+
+
+/* CTA buttons */
+
+document
+    .querySelectorAll(".membership-cta")
+    .forEach((button) => {
+
+        button.addEventListener("click", () => {
+
+            const planName =
+                button.dataset.plan;
+
+            openMembershipDetails(planName);
+
+        });
+
+    });
+
+
+/* Close button */
+
+membershipModalClose?.addEventListener(
+    "click",
+    closeMembershipDetails
+);
+
+
+/* Click outside */
+
+membershipModal?.addEventListener(
+    "click",
+    (event) => {
+
+        if (
+            event.target === membershipModal
+        ) {
+            closeMembershipDetails();
+        }
+
+    }
+);
+
+
+/* Escape */
+
+document.addEventListener(
+    "keydown",
+    (event) => {
+
+        if (
+            event.key === "Escape" &&
+            membershipModal?.classList.contains("active")
+        ) {
+            closeMembershipDetails();
+        }
+
+    }
+);
