@@ -3484,3 +3484,240 @@ body {
     }
 
 }
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: #0a0a0a;
+
+    color: #fff;
+
+    border-top: 1px solid #292929;
+}
+
+.footer-container {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 70px 6%;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.2fr;
+
+    gap: 50px;
+}
+
+
+/* =========================================
+   FOOTER BRAND
+========================================= */
+
+.footer-brand {
+    max-width: 320px;
+}
+
+.footer-logo {
+    display: inline-block;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 1.8rem;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+.footer-logo:hover {
+    color: #fff;
+
+    text-decoration: none;
+}
+
+.footer-brand p {
+    margin: 18px 0 0;
+
+    color: #888;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FOOTER COLUMNS
+========================================= */
+
+.footer-column h3 {
+    margin: 0 0 22px;
+
+    color: #ff6b61;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.footer-column ul {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 13px;
+}
+
+.footer-column li a {
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.footer-column li a:hover {
+    color: #fff;
+
+    padding-left: 4px;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   FOOTER CONTACT
+========================================= */
+
+.footer-contact p {
+    margin: 0 0 13px;
+
+    color: #aaa;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 22px 6%;
+
+    border-top: 1px solid #292929;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 0.8rem;
+}
+
+.footer-bottom a {
+    color: #888;
+
+    text-decoration: none;
+
+    font-size: 0.8rem;
+
+    transition: color 0.2s ease;
+}
+
+.footer-bottom a:hover {
+    color: #ff6b61;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr;
+
+        gap: 40px;
+    }
+
+    .footer-contact {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        padding: 55px 20px;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-contact {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+}

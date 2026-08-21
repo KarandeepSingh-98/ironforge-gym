@@ -956,3 +956,15 @@ contactForm?.addEventListener(
 
     }
 );
+
+/* =========================================
+   FOOTER COPYRIGHT YEAR
+========================================= */
+
+const copyrightYear =
+    document.getElementById("copyrightYear");
+
+if (copyrightYear) {
+    copyrightYear.textContent =
+        new Date().getFullYear();
+}
