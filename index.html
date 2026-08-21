@@ -146,10 +146,359 @@
     </div>
 </section>
 
+<!-- PROGRAMS SECTION -->
+<section class="programs-section" id="programs">
+    <div class="programs-container">
+
+        <div class="programs-heading">
+            <p class="section-tag">OUR PROGRAMS</p>
+
+            <h2>
+                TRAIN WITH
+                <span>PURPOSE.</span>
+            </h2>
+
+            <p>
+                Choose a training program designed to match your goals,
+                challenge your limits, and help you become your strongest self.
+            </p>
+        </div>
+
+        <div class="programs-grid">
+
+            <!-- Strength Training -->
+            <article class="program-card" data-program="01">
+                <div class="program-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85"
+                        alt="Athlete performing strength training"
+                    >
+                </div>
+
+                <div class="program-content">
+                    <span class="program-number">01</span>
+
+                    <h3>Strength Training</h3>
+
+                    <p>
+                        Build functional strength with structured workouts
+                        designed to improve power, stability, and performance.
+                    </p>
+
+                    <button
+                        class="program-link"
+                        data-program="strength"
+                    >
+                        Learn More →
+                    </button>
+                </div>
+            </article>
+            
+            <!-- Muscle Building -->
+            <article class="program-card" data-program="02">
+                <div class="program-image">
+                    <img
+                    src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=85"
+                    alt="Athlete training for muscle building"
+                    >
+                </div>
+                
+                <div class="program-content">
+                    <span class="program-number">02</span>
+                    
+                    <h3>Muscle Building</h3>
+                    
+                    <p>
+                        Follow progressive training programs focused on
+                        building lean muscle and maximizing your growth.
+                    </p>
+                    
+                    <button
+                        class="program-link"
+                        data-program="muscle"
+                    >
+                        Learn More →
+                    </button>
+                </div>
+            </article>
+
+            <!-- Weight Loss -->
+            <article class="program-card" data-program="03">
+                <div class="program-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=85"
+                        alt="Athlete exercising for weight loss"
+                        >
+                </div>
+
+                <div class="program-content">
+                    <span class="program-number">03</span>
+
+                    <h3>Weight Loss</h3>
+                    
+                    <p>
+                        Burn calories, improve conditioning, and develop
+                        sustainable habits with goal-focused training.
+                    </p>
+
+                    <button
+                        class="program-link"
+                        data-program="weight-loss"
+                    >
+                        Learn More →
+                    </button>
+                </div>
+            </article>
+
+            <!-- Personal Training -->
+            <article class="program-card" data-program="04">
+                <div class="program-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85"
+                        alt="Personal trainer coaching a client"
+                    >
+                </div>
+
+                <div class="program-content">
+                    <span class="program-number">04</span>
+
+                    <h3>Personal Training</h3>
+                    
+                    <p>
+                        Get one-on-one guidance from experienced trainers
+                        with workouts tailored specifically to your goals.
+                    </p>
+                    
+                    <button
+                        class="program-link"
+                        data-program="personal"
+                    >
+                        Learn More →
+                    </button>
+                </div>
+            </article>
+
+            <!-- HIIT -->
+            <article class="program-card" data-program="05">
+                <div class="program-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=900&q=85"
+                        alt="Athlete performing high intensity training"
+                        >
+                </div>
+                
+                <div class="program-content">
+                    <span class="program-number">05</span>
+                    
+                    <h3>HIIT</h3>
+                    
+                    <p>
+                        Push your limits with high-intensity intervals that
+                        improve cardiovascular fitness and endurance.
+                    </p>
+                
+                    <button
+                        class="program-link"
+                        data-program="hiit"
+                    >
+                        Learn More →
+                    </button>
+                </div>
+            </article>
+
+            <!-- Functional Training -->
+            
+            <article class="program-card" data-program="06">
+                <div class="program-image">
+                    <img
+                    src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=85"
+                    alt="Athlete performing functional training"
+                    >
+                </div>
+            
+            <div class="program-content">
+                <span class="program-number">06</span>
+
+                    <h3>Functional Training</h3>
+                    
+                    <p>
+                        Improve movement, mobility, balance, and everyday
+                        performance through practical full-body training.
+                    </p>
+                    
+                    <button
+                        class="program-link"
+                        data-program="functional"
+                    >
+                        Learn More →
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAM DETAILS MODAL -->
+<div class="program-modal" id="programModal">
+
+    <div class="program-modal-overlay"></div>
+
+    <div class="program-modal-content">
+
+        <button
+            class="program-modal-close"
+            id="programModalClose"
+            aria-label="Close program details"
+        >
+            ×
+        </button>
+
+        <span class="program-modal-number" id="modalNumber">
+            01
+        </span>
+
+        <h2 id="modalTitle">
+            Strength Training
+        </h2>
+
+        <p id="modalDescription">
+            Build strength and improve overall performance.
+        </p>
+
+        <div class="program-modal-details">
+
+            <div>
+                <span>FOCUS</span>
+                <strong id="modalFocus">
+                    Strength & Power
+                </strong>
+            </div>
+
+            <div>
+                <span>LEVEL</span>
+                <strong id="modalLevel">
+                    Beginner to Advanced
+                </strong>
+            </div>
+
+            <div>
+                <span>FORMAT</span>
+                <strong id="modalFormat">
+                    Individual & Group
+                </strong>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
     <!-- Temporary anchors for future sections -->
-    <section id="programs"></section>
     <section id="membership"></section>
 </main>
+
+
+<!-- Program Details Modal -->
+<div class="program-details-modal" id="programDetailsModal" aria-hidden="true">
+
+    <div class="program-details-content">
+
+        <button
+            class="program-details-close"
+            id="programDetailsClose"
+            aria-label="Close program details"
+        >
+            &times;
+        </button>
+
+        <span class="program-details-number" id="detailsNumber">01</span>
+
+        <h2 id="detailsTitle">Strength Training</h2>
+
+        <p class="program-details-description" id="detailsDescription">
+            Build raw strength, improve stability, and develop functional
+            power through progressive resistance training.
+        </p>
+
+        <!-- Program Information -->
+        <div class="program-details-info">
+
+            <div class="program-details-card">
+                <span>FOCUS</span>
+                <strong id="detailsFocus">
+                    Strength & Power
+                </strong>
+            </div>
+
+            <div class="program-details-card">
+                <span>LEVEL</span>
+                <strong id="detailsLevel">
+                    Beginner to Advanced
+                </strong>
+            </div>
+
+            <div class="program-details-card">
+                <span>FORMAT</span>
+                <strong id="detailsFormat">
+                    Individual & Group
+                </strong>
+            </div>
+
+            <div class="program-details-card">
+                <span>DURATION</span>
+                <strong id="detailsDuration">
+                    12 Weeks
+                </strong>
+            </div>
+
+        </div>
+
+        <!-- Price -->
+        <div class="program-price">
+            <span>PROGRAM PRICE</span>
+            <strong id="detailsPrice">₹2,999 / month</strong>
+        </div>
+
+        <!-- What's Included -->
+        <div class="program-included">
+
+            <h3>What's Included</h3>
+
+            <ul id="detailsIncluded">
+                <li>Personalized workout plan</li>
+                <li>Progressive training program</li>
+                <li>Trainer guidance</li>
+                <li>Progress tracking</li>
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+        <div class="program-contact">
+
+            <h3>Contact IRONFORGE FITNESS</h3>
+
+            <p>
+                <strong>Phone:</strong>
+                <span>+91 XXXXX XXXXX</span>
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                <span>info@ironforgefitness.com</span>
+            </p>
+
+            <p>
+                <strong>Address:</strong>
+                <span>Your Gym Address, Your City</span>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 
     <script src="script.js"></script>
