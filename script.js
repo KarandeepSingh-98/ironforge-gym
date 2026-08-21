@@ -728,3 +728,231 @@ faqQuestions.forEach((question) => {
     });
 
 });
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+const contactName =
+    document.getElementById("contactName");
+
+const contactEmail =
+    document.getElementById("contactEmail");
+
+const contactPhone =
+    document.getElementById("contactPhone");
+
+const contactMessage =
+    document.getElementById("contactMessage");
+
+const contactSuccess =
+    document.getElementById("contactSuccess");
+
+
+function setContactError(
+    field,
+    errorElement,
+    message
+) {
+
+    errorElement.textContent = message;
+
+    field
+        .closest(".contact-field")
+        ?.classList.add("input-error");
+}
+
+
+function clearContactError(
+    field,
+    errorElement
+) {
+
+    errorElement.textContent = "";
+
+    field
+        .closest(".contact-field")
+        ?.classList.remove("input-error");
+}
+
+
+function validateContactEmail(email) {
+
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+}
+
+
+contactForm?.addEventListener(
+    "submit",
+    (event) => {
+
+        event.preventDefault();
+
+
+        const nameError =
+            document.getElementById(
+                "contactNameError"
+            );
+
+        const emailError =
+            document.getElementById(
+                "contactEmailError"
+            );
+
+        const phoneError =
+            document.getElementById(
+                "contactPhoneError"
+            );
+
+        const messageError =
+            document.getElementById(
+                "contactMessageError"
+            );
+
+
+        /* Clear previous errors */
+
+        clearContactError(
+            contactName,
+            nameError
+        );
+
+        clearContactError(
+            contactEmail,
+            emailError
+        );
+
+        clearContactError(
+            contactPhone,
+            phoneError
+        );
+
+        clearContactError(
+            contactMessage,
+            messageError
+        );
+
+        contactSuccess.textContent = "";
+
+
+        let isValid = true;
+
+
+        /* Name */
+
+        if (
+            contactName.value.trim() === ""
+        ) {
+
+            setContactError(
+                contactName,
+                nameError,
+                "Please enter your name."
+            );
+
+            isValid = false;
+
+        }
+
+
+        /* Email */
+
+        const email =
+            contactEmail.value.trim();
+
+
+        if (email === "") {
+
+            setContactError(
+                contactEmail,
+                emailError,
+                "Please enter your email."
+            );
+
+            isValid = false;
+
+        } else if (
+            !validateContactEmail(email)
+        ) {
+
+            setContactError(
+                contactEmail,
+                emailError,
+                "Please enter a valid email address."
+            );
+
+            isValid = false;
+
+        }
+
+
+        /* Phone */
+
+        const phone =
+            contactPhone.value.trim();
+
+
+        if (phone !== "") {
+
+            const phoneDigits =
+                phone.replace(/\D/g, "");
+
+
+            if (
+                phoneDigits.length < 7 ||
+                phoneDigits.length > 15
+            ) {
+
+                setContactError(
+                    contactPhone,
+                    phoneError,
+                    "Please enter a valid phone number."
+                );
+
+                isValid = false;
+
+            }
+
+        }
+
+
+        /* Message */
+
+        if (
+            contactMessage.value.trim() === ""
+        ) {
+
+            setContactError(
+                contactMessage,
+                messageError,
+                "Please enter your message."
+            );
+
+            isValid = false;
+
+        }
+
+
+        if (!isValid) {
+            return;
+        }
+
+
+        /*
+         * Version 1 is frontend-only.
+         * No email is actually sent.
+         */
+
+        contactSuccess.textContent =
+            "Thank you! Your message has been received.";
+
+
+        contactForm.reset();
+
+    }
+);

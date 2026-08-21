@@ -8,23 +8,68 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-brand">IRONFORGE FITNESS</div>
-        <ul class="navbar-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">Trainers</a></li>
-            <li><a href="#">Membership</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <button class="join-now-btn">Join Now</button>
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+
+    <a href="#home" class="navbar-brand">
+        IRONFORGE
+    </a>
+
+    <ul class="navbar-menu">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#programs">Programs</a>
+        </li>
+
+        <li>
+            <a href="#trainers">Trainers</a>
+        </li>
+
+        <li>
+            <a href="#membership">Membership</a>
+        </li>
+
+        <li>
+            <a href="#bmi">BMI</a>
+        </li>
+
+        <li>
+            <a href="#faq">FAQ</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+
+    <a
+        href="#membership"
+        class="join-now-btn"
+    >
+        Join Now
+    </a>
+
+
+    <button
+        class="hamburger-menu"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</nav>
 
     <main>
     <!-- HERO SECTION -->
@@ -1436,6 +1481,224 @@
                 </div>
 
             </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+
+    <div class="contact-container">
+
+        <div class="contact-heading">
+
+            <p class="section-tag">CONTACT</p>
+
+            <h2>
+                LET'S GET
+                <span>IN TOUCH.</span>
+            </h2>
+
+            <p>
+                Have a question about our programs or memberships?
+                Send us a message and we'll be happy to help.
+            </p>
+
+        </div>
+
+
+        <div class="contact-layout">
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form-wrapper">
+
+                <form
+                    class="contact-form"
+                    id="contactForm"
+                    novalidate
+                >
+
+                    <div class="contact-field">
+
+                        <label for="contactName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contactName"
+                            name="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                        <small
+                            class="contact-error"
+                            id="contactNameError"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="contact-field">
+
+                        <label for="contactEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <small
+                            class="contact-error"
+                            id="contactEmailError"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="contact-field">
+
+                        <label for="contactPhone">
+                            Phone
+                            <span>(Optional)</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="contactPhone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                        >
+
+                        <small
+                            class="contact-error"
+                            id="contactPhoneError"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="contact-field">
+
+                        <label for="contactMessage">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="contactMessage"
+                            name="message"
+                            rows="6"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                        <small
+                            class="contact-error"
+                            id="contactMessageError"
+                        ></small>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="contact-submit"
+                    >
+                        Send Message
+                    </button>
+
+
+                    <div
+                        class="contact-success"
+                        id="contactSuccess"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+                </form>
+
+            </div>
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <aside class="contact-info">
+
+                <div class="contact-info-header">
+
+                    <span>GET IN TOUCH</span>
+
+                    <h3>
+                        WE'RE HERE
+                        <strong>TO HELP.</strong>
+                    </h3>
+
+                </div>
+
+
+                <div class="contact-info-list">
+
+                    <div class="contact-info-item">
+
+                        <span>ADDRESS</span>
+
+                        <p>
+                            123 Fitness Avenue,<br>
+                            Your City, India
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <span>PHONE</span>
+
+                        <p>
+                            +91 XXXXX XXXXX
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <span>EMAIL</span>
+
+                        <p>
+                            info@ironforgefitness.com
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <span>OPENING HOURS</span>
+
+                        <p>
+                            Monday – Sunday<br>
+                            6:00 AM – 10:00 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
 
         </div>
 
