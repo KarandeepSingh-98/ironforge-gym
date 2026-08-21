@@ -517,3 +517,135 @@ document.addEventListener(
 
     }
 );
+
+/* =========================================
+   BMI CALCULATOR
+========================================= */
+
+const bmiHeight =
+    document.getElementById("bmiHeight");
+
+const bmiWeight =
+    document.getElementById("bmiWeight");
+
+const calculateBmi =
+    document.getElementById("calculateBmi");
+
+const bmiValue =
+    document.getElementById("bmiValue");
+
+const bmiCategory =
+    document.getElementById("bmiCategory");
+
+const bmiError =
+    document.getElementById("bmiError");
+
+
+calculateBmi?.addEventListener("click", () => {
+
+    const height =
+        Number(bmiHeight.value);
+
+    const weight =
+        Number(bmiWeight.value);
+
+
+    /* Validation */
+
+    if (
+        bmiHeight.value.trim() === "" ||
+        bmiWeight.value.trim() === ""
+    ) {
+        bmiError.textContent =
+            "Please enter both your height and weight.";
+
+        return;
+    }
+
+
+    if (
+        !Number.isFinite(height) ||
+        !Number.isFinite(weight)
+    ) {
+        bmiError.textContent =
+            "Please enter valid numbers.";
+
+        return;
+    }
+
+
+    if (height <= 0 || weight <= 0) {
+        bmiError.textContent =
+            "Height and weight must be greater than zero.";
+
+        return;
+    }
+
+
+    if (height < 50 || height > 250) {
+        bmiError.textContent =
+            "Please enter a realistic height between 50 cm and 250 cm.";
+
+        return;
+    }
+
+
+    if (weight < 10 || weight > 300) {
+        bmiError.textContent =
+            "Please enter a realistic weight between 10 kg and 300 kg.";
+
+        return;
+    }
+
+
+    /* Clear error */
+
+    bmiError.textContent = "";
+
+
+    /* Convert cm to meters */
+
+    const heightInMeters =
+        height / 100;
+
+
+    /* BMI formula */
+
+    const bmi =
+        weight /
+        (heightInMeters * heightInMeters);
+
+
+    const roundedBmi =
+        bmi.toFixed(1);
+
+
+    let category = "";
+
+
+    if (bmi < 18.5) {
+
+        category = "Underweight";
+
+    } else if (bmi < 25) {
+
+        category = "Normal";
+
+    } else if (bmi < 30) {
+
+        category = "Overweight";
+
+    } else {
+
+        category = "Obese";
+
+    }
+
+
+    bmiValue.textContent =
+        roundedBmi;
+
+    bmiCategory.textContent =
+        category;
+
+});

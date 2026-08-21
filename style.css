@@ -2138,3 +2138,537 @@ body {
     }
 
 }
+
+
+
+/* =========================================
+   TESTIMONIALS SECTION
+========================================= */
+
+.testimonials-section {
+    padding: 110px 6%;
+    background: #111;
+    color: #fff;
+}
+
+.testimonials-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.testimonials-heading {
+    max-width: 760px;
+    margin-bottom: 60px;
+}
+
+.testimonials-heading h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.testimonials-heading h2 span {
+    display: block;
+    color: #ff6b61;
+}
+
+.testimonials-heading > p:last-child {
+    max-width: 650px;
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* Grid */
+
+.testimonials-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* Card */
+
+.testimonial-card {
+    padding: 32px;
+
+    background: #171717;
+
+    border: 1px solid #292929;
+
+    border-radius: 10px;
+}
+
+
+/* Person */
+
+.testimonial-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 24px;
+}
+
+.testimonial-avatar {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.testimonial-person h3 {
+    margin: 0 0 5px;
+
+    font-size: 1.15rem;
+}
+
+.testimonial-person span {
+    color: #999;
+
+    font-size: 0.85rem;
+}
+
+
+/* Rating */
+
+.testimonial-rating {
+    margin-bottom: 20px;
+
+    color: #ff6b61;
+
+    font-size: 1rem;
+
+    letter-spacing: 3px;
+}
+
+
+/* Quote */
+
+.testimonial-card blockquote {
+    margin: 0 0 25px;
+
+    color: #d0d0d0;
+
+    font-size: 1.1rem;
+
+    line-height: 1.75;
+}
+
+.testimonial-card blockquote::before {
+    content: "“";
+
+    display: block;
+
+    margin-bottom: -12px;
+
+    color: #ff6b61;
+
+    font-family: Georgia, serif;
+
+    font-size: 4rem;
+
+    line-height: 1;
+}
+
+
+/* Goal */
+
+.testimonial-goal {
+    padding-top: 18px;
+
+    border-top: 1px solid #2b2b2b;
+
+    color: #ff6b61;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .testimonials-section {
+        padding: 90px 5%;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .testimonials-section {
+        padding: 70px 20px;
+    }
+
+    .testimonials-heading {
+        margin-bottom: 45px;
+    }
+
+    .testimonials-heading h2 {
+        font-size: 3.1rem;
+
+        letter-spacing: -2px;
+    }
+
+    .testimonials-heading > p:last-child {
+        font-size: 1rem;
+    }
+
+    .testimonial-card {
+        padding: 25px;
+    }
+
+    .testimonial-card blockquote {
+        font-size: 1rem;
+    }
+}
+
+
+/* =========================================
+   BMI CALCULATOR
+========================================= */
+
+.bmi-section {
+    padding: 110px 6%;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+.bmi-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.bmi-heading {
+    max-width: 760px;
+    margin-bottom: 55px;
+}
+
+.bmi-heading h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.bmi-heading h2 span {
+    display: block;
+    color: #ff6b61;
+}
+
+.bmi-heading > p:last-child {
+    max-width: 650px;
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* Card */
+
+.bmi-card {
+    padding: 40px;
+
+    background: #171717;
+
+    border: 1px solid #292929;
+
+    border-radius: 10px;
+}
+
+
+/* Form */
+
+.bmi-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.bmi-input-group label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #fff;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.bmi-input-wrapper {
+    display: flex;
+
+    align-items: center;
+
+    background: #0d0d0d;
+
+    border: 1px solid #333;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+}
+
+.bmi-input-wrapper:focus-within {
+    border-color: #ff6b61;
+}
+
+.bmi-input-wrapper input {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.bmi-input-wrapper input::placeholder {
+    color: #666;
+}
+
+.bmi-input-wrapper span {
+    padding-right: 15px;
+
+    color: #ff6b61;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* Error */
+
+.bmi-error {
+    grid-column: 1 / -1;
+
+    min-height: 20px;
+
+    margin: 0;
+
+    color: #ff6b61;
+
+    font-size: 0.85rem;
+}
+
+
+/* Button */
+
+.bmi-button {
+    grid-column: 1 / -1;
+
+    padding: 16px 24px;
+
+    border: 1px solid #ff6b61;
+
+    border-radius: 6px;
+
+    background: #ff6b61;
+
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.bmi-button:hover {
+    background: #e85b52;
+
+    transform: translateY(-2px);
+}
+
+
+/* Result */
+
+.bmi-result {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 35px;
+
+    padding: 40px;
+
+    background: #0d0d0d;
+
+    border: 1px solid #292929;
+
+    border-radius: 8px;
+
+    text-align: center;
+}
+
+.bmi-result-label {
+    margin-bottom: 10px;
+
+    color: #ff6b61;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.bmi-result strong {
+    margin-bottom: 10px;
+
+    color: #fff;
+
+    font-size: clamp(3rem, 7vw, 5rem);
+
+    line-height: 1;
+
+    font-weight: 900;
+}
+
+.bmi-category {
+    color: #bbb;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+}
+
+
+/* Disclaimer */
+
+.bmi-disclaimer {
+    margin-top: 24px;
+
+    padding: 20px;
+
+    border-left: 3px solid #ff6b61;
+
+    background: #121212;
+}
+
+.bmi-disclaimer strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #fff;
+
+    font-size: 0.85rem;
+}
+
+.bmi-disclaimer p {
+    margin: 0;
+
+    color: #888;
+
+    font-size: 0.85rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .bmi-section {
+        padding: 70px 20px;
+    }
+
+    .bmi-heading {
+        margin-bottom: 40px;
+    }
+
+    .bmi-heading h2 {
+        font-size: 3.1rem;
+
+        letter-spacing: -2px;
+    }
+
+    .bmi-heading > p:last-child {
+        font-size: 1rem;
+    }
+
+    .bmi-card {
+        padding: 25px 20px;
+    }
+
+    .bmi-form {
+        grid-template-columns: 1fr;
+    }
+
+    .bmi-error,
+    .bmi-button {
+        grid-column: auto;
+    }
+
+    .bmi-result {
+        padding: 30px 20px;
+    }
+}
