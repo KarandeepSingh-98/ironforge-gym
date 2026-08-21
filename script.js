@@ -649,3 +649,82 @@ calculateBmi?.addEventListener("click", () => {
         category;
 
 });
+
+
+/* =========================================
+   FAQ ACCORDION
+========================================= */
+
+const faqQuestions =
+    document.querySelectorAll(".faq-question");
+
+
+faqQuestions.forEach((question) => {
+
+    question.addEventListener("click", () => {
+
+        const isOpen =
+            question.getAttribute("aria-expanded") === "true";
+
+        const answerId =
+            question.getAttribute("aria-controls");
+
+        const answer =
+            document.getElementById(answerId);
+
+
+        /* Close every other FAQ */
+
+        faqQuestions.forEach((otherQuestion) => {
+
+            if (otherQuestion !== question) {
+
+                otherQuestion.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                const otherAnswerId =
+                    otherQuestion.getAttribute("aria-controls");
+
+                const otherAnswer =
+                    document.getElementById(otherAnswerId);
+
+                if (otherAnswer) {
+                    otherAnswer.hidden = true;
+                }
+
+            }
+
+        });
+
+
+        /* Toggle selected FAQ */
+
+        if (isOpen) {
+
+            question.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            if (answer) {
+                answer.hidden = true;
+            }
+
+        } else {
+
+            question.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+            if (answer) {
+                answer.hidden = false;
+            }
+
+        }
+
+    });
+
+});
